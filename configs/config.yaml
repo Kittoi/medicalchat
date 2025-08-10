@@ -1,0 +1,7 @@
+pgvector:
+  host: www.kitto.com.cn
+  port: 5432
+  user: postgres
+  password: medicalchat
+  dbname: postgres
+  sslmode: disable
