@@ -6,6 +6,14 @@ pgvector:
   dbname: postgres
   sslmode: disable
 
+ethereum:
+  rpc_url: "https://sepolia.infura.io/v3/d365013304784bbcb11c8c3abccfa78d"  # 以太坊RPC节点地址
+  private_key: "8b2bafe6795aa2808d9a2ea1039ca88f88c280ea792530c82e621261a1dc1ff2"  # 私钥(用于交易签名，测试环境使用)
+  contract_address: ""  # 存证合约地址
+  gas_limit: 30000  # Gas限制
+  gas_price: 20000000000  # Gas价格 (20 Gwei)
+  chain_id: 11155111  # 链ID (1为主网，5为Goerli测试网)
+  timeout: 30s  # 超时时间
 
 log:
   dir: "./logs"    # 日志目录
