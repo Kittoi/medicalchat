@@ -1,20 +1,27 @@
 package main
 
 import (
-	"log"
+	"fmt"
 
 	"github.com/gin-gonic/gin"
 
-	"medicalchat/pkg/utils"
+	"medicalchat/pkg/init"
 )
 
-func main() {
-	// 初始化配置
-	if err := utils.InitConfig(); err != nil {
-		log.Fatalf("配置初始化失败: %v", err)
+func init(){
+	// 初始化应用
+	if err := initApp.InitializeApp(); err != nil {
+		fmt.Printf("应用初始化失败: %v", err)
+		return
 	}
+}
 
-	r := gin.Default()
+func main() {
+	// 设置 Gin 的运行模式
+	gin.SetMode(gin.ReleaseMode)
+
+	// 创建新的 Gin 实例
+	r := gin.New()
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "Hello, world!",

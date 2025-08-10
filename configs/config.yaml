@@ -5,3 +5,7 @@ pgvector:
   password: medicalchat
   dbname: postgres
   sslmode: disable
+
+
+log:
+  dir: "./logs"    # 日志目录
