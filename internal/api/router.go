@@ -12,7 +12,7 @@ func SetupRouter() *gin.Engine {
 	engine := gin.New()
 
 	// 使用中间件
-	engine.Use(gin.Logger()) // 记录日志
+	engine.Use(gin.Logger())   // 记录日志
 	engine.Use(gin.Recovery()) // 恢复中间件，防止panic导致服务崩溃
 
 	// 设置所有路由

@@ -17,3 +17,12 @@ ethereum:
 
 log:
   dir: "./logs"    # 日志目录
+
+chat:
+  api_key: "sk-RTGfcCs1eBhBKBME56F3229eCfE04bAc9c96275b582d280c"  # AI服务API Key
+  base_url: "https://api.gpt.ge/v1"  # AI服务请求地址
+  model: "gpt-4o-mini"  # 使用的模型
+  max_tokens: 2048  # 最大token数
+  temperature: 0.7  # 温度参数
+  timeout: 30s  # 请求超时时间
+  stream: true  # 是否启用流式输出

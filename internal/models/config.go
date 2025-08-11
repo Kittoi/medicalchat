@@ -6,6 +6,7 @@ type Config struct {
 	PGVector PGVectorConfig `mapstructure:"pgvector"`
 	Log      LogConfig      `mapstructure:"log"`
 	Ethereum EthereumConfig `mapstructure:"ethereum"`
+	Chat     ChatConfig     `mapstructure:"chat"`
 }
 
 type PGVectorConfig struct {
@@ -30,4 +31,14 @@ type EthereumConfig struct {
 	GasPrice        int64         `mapstructure:"gas_price"`
 	ChainID         int64         `mapstructure:"chain_id"`
 	Timeout         time.Duration `mapstructure:"timeout"`
+}
+
+type ChatConfig struct {
+	APIKey      string        `mapstructure:"api_key"`
+	BaseURL     string        `mapstructure:"base_url"`
+	Model       string        `mapstructure:"model"`
+	MaxTokens   int           `mapstructure:"max_tokens"`
+	Temperature float32       `mapstructure:"temperature"`
+	Timeout     time.Duration `mapstructure:"timeout"`
+	Stream      bool          `mapstructure:"stream"`
 }
